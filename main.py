@@ -18,14 +18,9 @@ def main(input_dir):
 
     AH = AudioHandler()
     AH.process_audio(filenames)
-    print(filenames)
     AH.information()
-    words = AH.get_words()
-
-    for i in range(len(AH.get_words())):
-        word = AH.get_word(i)
-        AH.play_audio(word)
-
+    AH.play_word(0)
+    AH.play_words()
 
     return
 
