@@ -3,6 +3,10 @@ import sys
 import wave
 import numpy as np
 from AudioHandler import AudioHandler
+from ToneHandler import ToneHandler
+import matplotlib.pyplot as plt
+import librosa
+import librosa.display
 
 
 def format_input(input_dir):
@@ -19,8 +23,23 @@ def main(input_dir):
     AH = AudioHandler()
     AH.process_audio(filenames)
     AH.information()
-    AH.play_word(0)
-    AH.play_words()
+
+    TH = ToneHandler(AH)
+
+    i = 0
+    for word in AH.word_array:
+        AH.play_word(i)
+        i += 1
+        f0, times = TH.f0_over_time(word)
+
+        plt.figure(figsize=(10, 6))
+        plt.plot(times, f0, label="Fundamental Frequency (F0)", color="blue")
+        plt.xlabel("Time (s)")
+        plt.ylabel("Frequency (Hz)")
+        plt.title("Fundamental Frequency Over Time")
+        plt.legend()
+        plt.grid()
+        plt.show()
 
     return
 
