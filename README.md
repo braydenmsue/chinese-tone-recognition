@@ -2,22 +2,31 @@
 
 ![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/qi3.png?raw=true)
 # Description
-This program is designed to analyze the tones of Chinese words through analysis of waveform audio. Changes in the fundamental frequency are tracked over time to determine tone shape.
+This program is designed to analyze the tones of Chinese words through analysis of waveform audio. Changes in the fundamental frequency (f0) are tracked over time to determine tone shape.
 
 ## Mandarin
  - 4 basic tones
    - flat, rising, falling-rising, falling
- - 1 neutral tone (not implemented yet)
+ - 1 neutral tone
  - Mandarin numbers with tones:\
 ![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/mand_num_chart.PNG?raw=true)
 
-## Cantonese
+## Cantonese [Not Implemented]
  - 6 tones for simplicity (instead of 9)
    - falling 
    - low-rising, high-rising
    - high-flat, mid-neutral, low-neutral
  - Cantonese numbers with tones:\
  ![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/cant_num_chart.PNG?raw=true)
+
+### To be implemented
+ - Word block analysis
+   - Average f0 for particular speaker
+   - Mandarin neutral tone
+ - Word block waveform audio segmentation
+ - Recording user input
+    - Overlay of user input f0 and correct tone
+ - Cantonese
 
 # How to run
 1. Clone the repository
