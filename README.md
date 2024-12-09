@@ -1,6 +1,6 @@
 # Chinese Tone Recognition
 
-![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/qi3.png?raw=true)
+![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/qi3_tone.png?raw=true)
 # Description
 This program is designed to analyze the tones of Chinese words through analysis of waveform audio. Changes in the fundamental frequency are tracked over time to determine tone shape.
 
