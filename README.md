@@ -20,16 +20,20 @@ This program is designed to analyze the tones of Chinese words through analysis 
  ![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/cant_num_chart.PNG?raw=true)
 
 # How to run
-1. Activate the virtual environment
+1. Clone the repository
+```bash
+https://github.com/braydenmsue/chinese-tone-recognition.git
+````
+2. Navigate to root directory and activate virtual environment
 ```bash
 python -m venv venv
 source venv/bin/activate
 ```
-2. Install the required packages from root directory
+3. Install the required packages
 ```bash
 pip install -r requirements.txt
 ```
-3. Run the program
+4. Run the program
    1. Find the name of desired Recordings subdirectory of spliced phrases/sentences
       - Provided samples:
         - Recordings/**mandonumbers**: mandarin numbers (1 - 10)
