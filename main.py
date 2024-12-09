@@ -22,7 +22,7 @@ def main(input_dir):
 
     AH = AudioHandler()
     AH.process_audio(filenames)
-    AH.information()
+    # AH.information()
 
     TH = ToneHandler(AH)
 
@@ -37,6 +37,7 @@ def main(input_dir):
         plt.xlabel("Time (s)")
         plt.ylabel("Frequency (Hz)")
         plt.title("Fundamental Frequency Over Time")
+        plt.ylim(0, 500)
         plt.legend()
         plt.grid()
         plt.show()
