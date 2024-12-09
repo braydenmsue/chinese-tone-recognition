@@ -1,7 +1,7 @@
 # Chinese Tone Recognition
 
-![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/qi3.PNG?raw=true)
-![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/qi3_info.PNG?raw=true)
+![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/qi3.PNG?raw=true)
+![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/qi3_info.PNG?raw=true)
 # Description
 This program is designed to analyze the tones of Chinese words through analysis of waveform audio. Changes in the fundamental frequency are tracked over time to determine tone shape.
 
@@ -9,14 +9,14 @@ This program is designed to analyze the tones of Chinese words through analysis 
  - 4 basic tones
    - flat, rising, falling-rising, falling
  - 1 neutral tone (not implemented yet)
-![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/mand_num_chart.PNG?raw=true)
+![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/mand_num_chart.PNG?raw=true)
 
 ## Cantonese
  - 6 tones for simplicity (instead of 9)
    - falling 
    - low-rising, high-rising
    - high-flat, mid-neutral, low-neutral
- ![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/cant_num_chart.PNG?raw=true)
+ ![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/cant_num_chart.PNG?raw=true)
 
 # How to run
 1. Activate the virtual environment
