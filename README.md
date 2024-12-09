@@ -7,14 +7,14 @@ This program is designed to analyze the tones of Chinese words through analysis 
 ## Mandarin
  - 4 basic tones
    - flat, rising, falling-rising, falling
- - 1 neutral tone (not implemented yet)
+ - 1 neutral tone (not implemented yet)\
 ![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/mand_num_chart.PNG?raw=true)
 
 ## Cantonese
  - 6 tones for simplicity (instead of 9)
    - falling 
    - low-rising, high-rising
-   - high-flat, mid-neutral, low-neutral
+   - high-flat, mid-neutral, low-neutral\
  ![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/cant_num_chart.PNG?raw=true)
 
 # How to run
