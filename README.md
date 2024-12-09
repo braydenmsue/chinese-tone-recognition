@@ -19,7 +19,7 @@ This program is designed to analyze the tones of Chinese words through analysis 
  - Cantonese numbers with tones:\
  ![alt text](https://github.com/braydenmsue/chinese-tone-recognition/blob/main/figures/cant_num_chart.PNG?raw=true)
 
-### To be implemented
+### To Be Implemented
  - Word block analysis
    - Average f0 for particular speaker
    - Mandarin neutral tone
@@ -28,7 +28,7 @@ This program is designed to analyze the tones of Chinese words through analysis 
     - Overlay of user input f0 and correct tone
  - Cantonese
 
-# How to run
+# How to Run
 1. Clone the repository
 ```bash
 https://github.com/braydenmsue/chinese-tone-recognition.git
