@@ -14,14 +14,15 @@ class ToneHandler:
     # TODO: try ML model to predict tone (need dataset w/ words and expected tones)
 
     def get_tone(self, word_f0, threshold=50):
+        tone = 'N/A'
 
         start, end, global_max, global_min = self.f0_info(word_f0)
-        print("------------------------")
+        print("=============================")
         print("START Hz: ", start)
-        print("END Hz: ", end)
-        print("MAX Hz: ", global_max)
-        print("MIN Hz: ", global_min)
-        print("------------------------")
+        print("  END Hz: ", end)
+        print("  MAX Hz: ", global_max)
+        print("  MIN Hz: ", global_min)
+        print("-----------------------------")
 
         # scaling threshold based on range of f0 values
         hz_range = abs(global_max - global_min)
@@ -29,24 +30,31 @@ class ToneHandler:
             print("OLD THRESHOLD:", threshold)
             threshold = hz_range * 0.5  # arbitrary scaling factor
             print("NEW THRESHOLD:", threshold)
+            print("----------------------------")
 
         # if starts and ends in same place; range is small (tone is consistent)
         if abs(end - start) < threshold and abs(global_max - global_min) < threshold:
-            print("Tone: 1")
+            tone = '1'
         # if max is near the end and min is near the start
         elif abs(global_max - end) < threshold and abs(global_min - start) < threshold:
-            print("Tone: 2")
+            tone = '2'
         # start and end are close, but range is large
         elif abs(end - start) < threshold < hz_range:
-            print("Tone: 3")
+            tone = '3'
+        # edge case: falling-rising tone without full rise
         elif start > global_min and end > global_min:
-            print("Tone: 3 (LESS CERTAIN)")
+            tone = '~3'      # ~ : less certain
+        # max is close to start, min is close to end
         elif abs(global_max - start) < threshold and abs(global_min - end) < threshold:
-            print("Tone: 4")
+            tone = '4'
         else:
+            # neutral tone requires knowledge of speaker's 1st tone average f0
             print("DON'T KNOW")
 
-        print("\n")
+        print("TONE: ", tone, "|")
+        print("==========\n")
+
+        return tone, [start, end, global_max, global_min]
 
 
     def f0_info(self, f0_array):
